@@ -5,8 +5,8 @@ import React from "react";
  *A function which accept the original component and returns
  the new component.
  */
-const UpdatedComponent = (OriginalComponent) => {
-  class NewComponent extends React.Component {
+const withCounter = (WrappedComponent) => {
+  class WithCounter extends React.Component {
     //all the code that need to be share across the component.
     constructor(props) {
       super(props);
@@ -24,14 +24,14 @@ const UpdatedComponent = (OriginalComponent) => {
 
     render() {
       return (
-        <OriginalComponent
+        <WrappedComponent
           count={this.state.counter}
           incrementCount={this.incrementCount}
         />
       );
     }
   }
-  return NewComponent;
+  return WithCounter;
 };
 
-export default UpdatedComponent;
+export default withCounter;

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import UpdatedComponent from "./withCounter";
+import withCounter from "./withCounter";
 
 class Counter extends Component {
   render() {
@@ -12,7 +12,7 @@ class Counter extends Component {
   }
 }
 
-export default UpdatedComponent(Counter);
+export default withCounter(Counter);
 /** 
 Here instead of exporting the original component,
 we exporting hoc.
