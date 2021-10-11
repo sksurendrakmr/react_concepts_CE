@@ -7,8 +7,28 @@ import React from "react";
  */
 const UpdatedComponent = (OriginalComponent) => {
   class NewComponent extends React.Component {
+    //all the code that need to be share across the component.
+    constructor(props) {
+      super(props);
+
+      this.state = {
+        counter: 0,
+      };
+    }
+
+    incrementCount = () => {
+      this.setState((prevState) => {
+        return { counter: prevState.counter + 1 };
+      });
+    };
+
     render() {
-      return <OriginalComponent name='surendra' />;
+      return (
+        <OriginalComponent
+          count={this.state.counter}
+          incrementCount={this.incrementCount}
+        />
+      );
     }
   }
   return NewComponent;
