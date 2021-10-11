@@ -5,7 +5,7 @@ import React from "react";
  *A function which accept the original component and returns
  the new component.
  */
-const withCounter = (WrappedComponent) => {
+const withCounter = (WrappedComponent, incrementNumber) => {
   class WithCounter extends React.Component {
     //all the code that need to be share across the component.
     constructor(props) {
@@ -18,7 +18,7 @@ const withCounter = (WrappedComponent) => {
 
     incrementCount = () => {
       this.setState((prevState) => {
-        return { counter: prevState.counter + 1 };
+        return { counter: prevState.counter + incrementNumber };
       });
     };
 

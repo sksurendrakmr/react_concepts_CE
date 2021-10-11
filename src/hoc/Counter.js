@@ -14,7 +14,7 @@ class Counter extends Component {
   }
 }
 
-export default withCounter(Counter);
+export default withCounter(Counter, 5);
 /** 
 Here instead of exporting the original component,
 we exporting hoc.
