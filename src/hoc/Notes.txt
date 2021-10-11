@@ -25,3 +25,15 @@ A HOC is a pattern where a function accepts a component and returns
 an enhanced component.
 HOC pattern used to share common functionality between components without having
 to repeat the code.
+
+
+When we pass down the props or specify props on the Counter component ,
+the props are sent down to HOC not to Counter component.
+So the props are pass down to the HOC but not to the component that is wrapped.
+
+To fix this issues, we need to pass down the remaining props to the wrap component 
+using the spread operator.
+
+
+Summary
+So when we create HOC, Make sure to pass down the rest of the props.
