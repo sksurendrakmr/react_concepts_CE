@@ -20,3 +20,8 @@ and returns an enhanced component or we have HOC pattern.
 In HOC, we need to pass down the state and the incrementCount method as props
 so that original component make use of that functionality.
 
+Summary
+A HOC is a pattern where a function accepts a component and returns 
+an enhanced component.
+HOC pattern used to share common functionality between components without having
+to repeat the code.
