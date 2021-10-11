@@ -1,0 +1,22 @@
+Why Higher Order Components?
+To Share common functionality between components.
+
+HOC => A pattern where a function takes a component as an 
+argument and returns a new component.
+
+const NewComponent = higherOrderComponent( originalComponent );
+
+Typically, HOC adds additional data or functionality to the original component.
+So, new component can also be referred to as an enhanced component.
+
+E.g. const ironMan = withSuit(TonyStark);
+Here Tonystark is original component, withSuit is a function that will enhance 
+TonyStark and return IronMan.
+
+From react point of view
+We have a function which accepts the original component, adds functionality
+and returns an enhanced component or we have HOC pattern.
+
+In HOC, we need to pass down the state and the incrementCount method as props
+so that original component make use of that functionality.
+
