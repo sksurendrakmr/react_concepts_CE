@@ -1,13 +1,13 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Counter from "./hoc/Counter";
-import HoverCounter from "./hoc/HoverCounter";
+import ComponentC from "./reactContext/ComponentC";
+import { UserProvider } from "./reactContext/UserContext";
 
 function App() {
   return (
     <div className='App'>
-      <Counter />
-      <HoverCounter />
+      <UserProvider value='Surendra'>
+        <ComponentC />
+      </UserProvider>
     </div>
   );
 }
